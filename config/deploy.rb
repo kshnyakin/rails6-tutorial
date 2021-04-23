@@ -1,8 +1,8 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.16.0"
 
-set :application, "rails-devops"
-set :repo_url, "git@github.com:kshnyakin/rails-devops.git"
+set :application, "rails6-tutorial"
+set :repo_url, "git@github.com:kshnyakin/rails6-tutorial.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -21,7 +21,7 @@ set :deploy_to, "/home/deploy/#{fetch :application}"
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "config/secrets.yml"#, "config/database.yml"
+append :linked_files, "config/secrets.yml", "config/database.yml"
 
 # Default value for linked_dirs is []
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 
